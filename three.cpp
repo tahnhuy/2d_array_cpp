@@ -269,7 +269,33 @@ int positionMinCol(int a[20][20], int rows, int cols)
 }
 
 //k
-void 
+void parallel(int a[20][20], int rows, int cols, int &k)
+{
+	cout << "k = ";
+	cin >> k;
+	for (int i = 0; i < rows; ++i)
+	{
+		for (int j = 0; j < cols; ++j)
+		{
+			if (k == j - i)
+			{
+				cout << a[i][j] << " ";
+			}
+		}
+	}
+	cout << endl;
+	
+	for (int i = 0; i < rows; ++i)
+	{
+		for (int j = 0; j < cols; ++j)
+		{
+			if (k == i - j)
+			{
+				cout << a[i][j] << " ";
+			}
+		}
+	}
+}
 
 int main()
 {
@@ -305,7 +331,8 @@ int main()
 	cout << "Position of min column: " << positionMinCol(a, rows, cols) << "(" << minCol(a, rows, cols) << ")" << endl;
 	
 	//k
-	
+	int k;
+	parallel(a, rows, cols, k);
 	
 	return 0;
 }
