@@ -439,6 +439,7 @@ int findRowPrimeMax(int a[20][20], int level)
 			maxCount = count;
 			maxRow = i;
 		}
+		count = 0;
 	}
 	
 	return maxRow;
